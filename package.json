@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/RVCC-IDMX/discord-bot-shaheerashan/issues"
   },
-  "homepage": "https://github.com/RVCC-IDMX/discord-bot-shaheerashan#readme"
+  "homepage": "https://github.com/RVCC-IDMX/discord-bot-shaheerashan#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2"
+  }
 }
