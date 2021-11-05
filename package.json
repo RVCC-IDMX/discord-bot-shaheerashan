@@ -1,0 +1,20 @@
+{
+  "name": "discord-bot-shaheerashan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVCC-IDMX/discord-bot-shaheerashan.git"
+  },
+  "keywords": [],
+  "author": "Shaheer Ashan <shaheer.ashan@gmail.com> (https://github.com/shaheerashan)",
+  "license": "Student",
+  "bugs": {
+    "url": "https://github.com/RVCC-IDMX/discord-bot-shaheerashan/issues"
+  },
+  "homepage": "https://github.com/RVCC-IDMX/discord-bot-shaheerashan#readme"
+}
