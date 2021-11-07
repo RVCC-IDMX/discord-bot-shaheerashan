@@ -1,7 +1,6 @@
+import cowsay from './utils/cowsay';
 import DiscordJS, { Intents } from 'discord.js';
 import dotenv from 'dotenv';
-import * as cowsay from 'cowsay';
-import { IOptions } from 'cowsay';
 dotenv.config();
 
 const client = new DiscordJS.Client({
@@ -26,13 +25,7 @@ client.on('messageCreate', (message) => {
       .catch(console.error);
   }
 
-  let opts: IOptions = {
-    text: 'Good Luck People!',
-    r: true,
-    f: 'mona-lisa',
-  };
-
-  let output: string = cowsay.say(opts);
+  const output = cowsay();
 
   if (message.content === 'cowsay') {
     message
