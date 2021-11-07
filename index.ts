@@ -1,6 +1,7 @@
 import DiscordJS, { Intents } from 'discord.js';
 import dotenv from 'dotenv';
 import * as cowsay from 'cowsay';
+import { IOptions } from 'cowsay';
 dotenv.config();
 
 const client = new DiscordJS.Client({
@@ -25,13 +26,19 @@ client.on('messageCreate', (message) => {
       .catch(console.error);
   }
 
+  let opts: IOptions = {
+    text: 'Good Luck People!',
+    r: true,
+    f: 'mona-lisa',
+  };
+
+  let output: string = cowsay.say(opts);
+
   if (message.content === 'cowsay') {
     message
       .react('🐱')
       .then(() => console.log(`Reacted to message "${message.content}"`))
       .catch(console.error);
-
-    let output: string = cowsay.say({ text: 'Lets Do This!' });
     message
       .reply({
         content: `
@@ -41,7 +48,14 @@ client.on('messageCreate', (message) => {
       `,
       })
       .then(() => console.log(`Replied to message "${message.content}"`))
-      .catch(console.error);
+      .catch((error) => {
+        if (error.code == 50035) {
+          message
+            .reply(`I did a oopsie...`)
+            .then(() => console.log('Picture too epic'))
+            .catch(console.error);
+        }
+      });
   }
 });
 
