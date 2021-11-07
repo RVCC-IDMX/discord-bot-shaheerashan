@@ -14,7 +14,7 @@ client.on('ready', () => {
 client.on('messageCreate', (message) => {
   if (message.content === 'ping') {
     message
-      .react('🐱')
+      .react('🐿️')
       .then(() => console.log(`Reacted to message "${message.content}"`))
       .catch(console.error);
     message
@@ -27,7 +27,7 @@ client.on('messageCreate', (message) => {
 
   if (message.content === 'cowsay') {
     message
-      .react('🐿️')
+      .react('🐱')
       .then(() => console.log(`Reacted to message "${message.content}"`))
       .catch(console.error);
 
