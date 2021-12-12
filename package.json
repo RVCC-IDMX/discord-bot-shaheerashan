@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "nodemon",
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon",
     "cowsay": "cowsay"
   },
   "repository": {
