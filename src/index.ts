@@ -2,7 +2,8 @@
 /* eslint-disable global-require */
 import DiscordJS, { Intents } from 'discord.js';
 import dotenv from 'dotenv';
-// import cowsay from './utils/cowsay';
+import cowsay from './commands/cowsay';
+
 dotenv.config();
 
 // creates client
